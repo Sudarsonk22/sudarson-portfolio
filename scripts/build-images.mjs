@@ -6,11 +6,10 @@ import { mkdirSync } from 'node:fs';
 
 const OUT = 'public/assets';
 mkdirSync(OUT, { recursive: true });
-
-const hi = sharp('pic1.jpeg');
+const hi = sharp('photos/pic1.jpeg');
 const { width, height } = await hi.metadata();
 
-const alpha = await sharp('pic.png')
+const alpha = await sharp('photos/pic.png')
   .ensureAlpha()
   .extractChannel('alpha')
   .resize(width, height, { kernel: 'lanczos3' })
@@ -18,7 +17,7 @@ const alpha = await sharp('pic.png')
   .raw()
   .toBuffer();
 
-const rgb = await sharp('pic1.jpeg').removeAlpha().raw().toBuffer();
+const rgb = await sharp('photos/pic1.jpeg').removeAlpha().raw().toBuffer();
 const rgba = Buffer.alloc(width * height * 4);
 for (let i = 0; i < width * height; i++) {
   rgba[i * 4] = rgb[i * 3];

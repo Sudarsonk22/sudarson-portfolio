@@ -39,13 +39,13 @@ export default function ResumeModal({ onClose }: { onClose: () => void }) {
         </div>
       </div>
       <motion.div
-        className="gutter flex-1 pb-6"
+              className="gutter min-h-0 flex-1 pb-6"
         initial={{ opacity: 0, y: 40, scale: 0.98 }}
         animate={{ opacity: 1, y: 0, scale: 1 }}
         transition={{ duration: 0.6, ease: EASE }}
       >
         {small ? (
-          <div data-lenis-prevent className="h-full overflow-y-auto">
+                   <div data-lenis-prevent className="h-full overflow-y-auto overscroll-contain pb-10">x
             <ResumeSheet />
             <a href={profile.resumePdf} target="_blank" rel="noreferrer" className="glass mt-4 flex min-h-12 items-center justify-center rounded-md text-sm font-semibold text-bone">
               Open original PDF ↗

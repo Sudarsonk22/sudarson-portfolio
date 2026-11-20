@@ -23,7 +23,7 @@ export const profile = {
     linkedin: 'https://www.linkedin.com/in/sudarson-1258ca54',
     // add your GitHub URL here and the GitHub buttons appear automatically
 
-    github: 's://github.com/Sudarsonk22',
+    github: 'https://github.com/Sudarsonk22',
   },
   resumePdf: '/assets/Sudarson_K_Resume.pdf',
   resumeFileName: 'Sudarson_K_Resume.pdf',
